@@ -1,5 +1,7 @@
 import React from 'react'
 import dayjs from "dayjs";
+import { useDispatch } from 'react-redux';
+import { activeNote } from '../../actions/notes';
 
 
 const advancedFormat = require("dayjs/plugin/advancedFormat");
@@ -8,11 +10,24 @@ dayjs.extend(advancedFormat);
 
 export const JournalEntry = ( {id, date, title, body, url}) => {
 
-    
     const noteDate = dayjs(date);
+    const dispatch = useDispatch();
+
+    const handleEntryClick = () => {
+        dispatch( 
+            activeNote(id, {
+                date, title, body, url
+            }))
+    };
+
+
 
     return (
-        <div className="journal__entry pointer">
+        <div 
+            className="journal__entry pointer"  
+            onClick={handleEntryClick}
+        
+        >
 
         {    
             url &&
