@@ -3,7 +3,7 @@ Journal App es un diario digital, permite crear entradas diarias con texto y fot
 
 La base de datos y autenticación de usuarios se realiza en Firabase.
 
-Aún en desarrollo, al finaliza realizaré despligue. 
+Aún en desarrollo, al finalizar realizaré despligue. 
 
 
 # Si quieres clonarlo:
